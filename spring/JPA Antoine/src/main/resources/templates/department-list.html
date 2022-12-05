@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>JPA relations</title>
+</head>
+
+<body>
+	<h1>Liste des départments (Spring Data JPA)</h1>
+	<div th:each="dept:${depts}">
+		<h2 th:text="${dept.name}">Department name</h2>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Nom & Prénom</th>
+				<th> Date de naissance </th>
+				<th>Email</th>
+				<th> Date de création </th>
+			</tr>
+			<tr th:each="student: ${dept.students}">
+				<td th:text="${student.id}"></td>
+				<td th:text="${student.name}"></td>
+				<td th:text="${student.birthDate}"></td>
+				<td th:text="${student.email}"></td>
+				<td th:text="${student.createdAt}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

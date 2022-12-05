@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Cours Spring Security</title>
+</head>
+
+<body>
+  <h1>Cours Spring Security</h1>
+  <img th:src="@{/images/logo_esme.png}"/>
+  <form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout"/>
+  </form>
+  
+  <a th:href="@{/student/list}" id="stud-list"> Voir la liste de étudiants</a>
+</body>
+</html>

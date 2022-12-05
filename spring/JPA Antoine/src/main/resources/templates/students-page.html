@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Spring Data JPA</title> 
+</head>
+<body>
+    <h1>Liste des etudiants (Spring Data JPA)</h1>
+    <table>
+        <tr>
+            <th>Id</th> <th>Nom & Prenom</th> <th> Date de naissance </th> <th>Email</th> <th> Date de creation </th> <th> Departement </th>
+        </tr>
+        <tr th:each = "student: ${students}">
+            <td th:text = "${student.id}"></td>
+            <td th:text = "${student.name}"></td>
+            <td th:text = "${student.birthDate}"></td>
+            <td th:text = "${student.email}"></td>
+            <td th:text = "${student.createdAt}"></td>
+            <td th:text = "${student.department.name}"></td>
+        </tr>
+    </table>
+</body>
+</html>

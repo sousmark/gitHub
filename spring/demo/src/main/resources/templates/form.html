@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+  		<title>Hello World - Thymeleaf</title>
+	</head>
+	<body>
+		<form action="/student" th:object="${student}" method="post">
+			<label for "name">Nom et prénom</label>
+			<input name="name" type="text" th:field="*{name}" />
+			<span class="valid-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span><br />
+		
+			<label for "birthDate">Date de naissance</label>
+			<input name="birthDate" type="text" th:field="*{birthDate}" /> <span class="valid-error" th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}">Birth date Error</span><br />
+			
+			<label for "name">Email</label>
+			<input name="email" type="text" th:field="*{email}" />
+			<span class="valid-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span><br />
+			
+			<button type="submit">Envoyer</button>
+		</form>
+	</body>
+</html>

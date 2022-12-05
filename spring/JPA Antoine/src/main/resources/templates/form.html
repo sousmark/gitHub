@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+	<form th:action="@{/student/new}" th:object="${student}" method="post">
+		
+		<label for "name">Nom et prenom</label>
+		<input name="name" type="text" th:field="*{name}" /> <br />
+		
+		<label for "birthDate">Date de naissance</label>
+		<input name="birthDate" type="text" th:field="*{birthDate}" /><br />
+		
+		<label for "name">Email</label>
+		<input name="email" type="text" th:field="*{email}" /><br />
+		<label for="depart"> Departement</label>
+		<select name="depart" th:field="*{department}">
+			<option value="" selected disabled>Selectionner un departement</option>
+			<th:block th:each="dept:${listDepartment}">
+			<option th:text="${dept.name}" th:value="${dept.id}"></option>
+		</th:block>
+	</select><br/>
+	
+	<button type="submit">Submit</button>
+	
+</form>
+</body>
+
+</html>

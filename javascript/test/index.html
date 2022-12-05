@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <style>
+    #chat {
+      display: flex;
+      flex-flow: column nowrap;
+      position: absolute;
+      right: 0;
+    }
+    #chat div {
+      font-size: 18px;
+      padding: 10px;
+      color: white;
+      border-radius: 5px;
+    }
+    .user {
+      background-color: deepskyblue;
+      align-self: flex-end;
+    }
+    .friend {
+      background-color: orchid;
+      align-self: flex-start;
+    }
+
+    #chat-logo>img {
+        cursor: pointer;
+        width: 200px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+  </style>
+
+  <body>
+      <div id="chat">
+        <div contenteditable="true" class="user">
+            Have you completed the css chat tutorial
+          </div>
+          <div class="friend">No I did not.</div>
+          <div class="user">Is it working?</div>
+          <div class="friend">NO :(</div>
+      </div>
+      <div id="chat-logo">
+          <img src="/Users/marksous/dev/toucher-couler/src/chat-message.jpeg" alt="chat-message">
+      </div>
+  </body>
+</html>

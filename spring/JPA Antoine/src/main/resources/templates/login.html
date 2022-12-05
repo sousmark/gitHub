@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Cours Spring Security</title>
+</head>
+
+<body>
+  <h1>Authentification</h1>
+  <img th:src="@{/images/logo_esme.png}"/>  
+  <div th:if="${error}">
+    Impossible de se connecter. Vérifiez votre username et mot de passe.
+  </div>
+  
+  <p>Vous êtes nouveau? Cliquez
+    <a th:href="@{/register}">ici</a> pour vous enregistrer.</p>
+    
+    <form method="POST" th:action="@{/login}" id="loginForm">
+      
+      <label for="username">Username: </label>
+      <input type="text" name="username" id="username" /><br/>
+      
+      <label for="password">Mot de passe: </label>
+      <input type="password" name="password" id="password" /><br/>
+      
+      <input type="submit" value="Login"/>
+    </form>
+  </body>
+  </html>

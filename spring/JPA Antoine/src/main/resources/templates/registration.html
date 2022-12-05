@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title> Cours Spring Security</title>
+</head>
+
+<body>
+	<h1>Enregistrement</h1>
+	<img th:src="@{/images/logo_esme.png}" />
+	<form method="POST" th:action="@{/register}" id="registerForm">
+		<label for="username">Username: </label>
+		<input type="text" name="username" /><br />
+		<label for="password">Mot de passe: </label>
+		<input type="password" name="password" /><br />
+		<label for="confirm">Confirmez le mot de passe: </label>
+		<input type="password" name="confirm" /><br />
+		<label for="fullname">Nom complet: </label>
+		<input type="text" name="fullname" /><br />
+		<label for="phone">Téléphone: </label>
+		<input type="text" name="phone" /><br />
+		<input type="submit" value="Register" />
+	</form>
+</body>
+
+</html>

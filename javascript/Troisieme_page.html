@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Troisième page</title>
+    </head>
+    <body>
+       <fieldset style="width: 60%; margin: auto;">
+            <legend>Formulaire d'inscription</legend>
+            <form action="" method="get">
+                <div>
+                    <label for="name">Nom</label>
+                    <input type="text" name="nom" placeholder="saisir votre nom" required>
+                </div>
+                <div>
+                    <label for="name">Prenom</label>
+                    <input type="text" name="prenom" placeholder="saisir votre prenom" required>
+                </div>
+                <div>
+                    <label for="name">Email</label>
+                    <input type="mail" name="nom" placeholder="saisir votre email" required>
+                </div>
+
+                <div>
+                    <label style="margin-right: 2%;" for="sexe">Sexe</label>
+
+                    <label for="sexe">Masculin</label>
+                    <input type="radio" name="sexe" value="masculin">
+
+                    <label for="sexe">Feminin</label>
+                    <input type="radio" name="sexe" value="feminin">
+                </div>
+
+                <div>
+                    <label for="file">Photo</label>
+                    <input type="file" name="file" accept="image/png, image/jpeg">
+                </div>
+
+                <div>
+                    <label for="pays">Pays</label>
+
+                    <select name="pays">
+                        <option value="">--Please choose an option--</option>
+                        <option value="fr">France</option>
+                        <option value="es">Espagne</option>
+                        <option value="al">Allemagne</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="languages">Les langages préférés</label>
+
+                    <select name="languages" size="4" multiple>
+                        <option>C</option>
+                        <option>C++</option>
+                        <option>Java</option>
+                        <option>PHP</option>
+                    </select>
+    
+                    <label>(Pour faire plusieurs choix maintenir la touche CTRL enfoncée)</label>
+                </div>
+
+                <div>
+                    <label style="margin-right: 2%;" for="domaine">Domaine d'activités</label>
+
+                    <label for="sexe">Informatique</label>
+                    <input type="checkbox" name="domaine" value="informatique">
+
+                    <label for="sexe">Gestion</label>
+                    <input type="checkbox" name="domaine" value="gestion">
+
+                    <label for="sexe">Pédagogie</label>
+                    <input type="checkbox" name="domaine" value="pedagogie">
+                </div>
+
+                <div>
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+                </div>
+            </form>
+       </fieldset>
+    </body>
+</html>
+
+<style>
+    div {
+        margin-top: 3%;
+    }
+</style>
